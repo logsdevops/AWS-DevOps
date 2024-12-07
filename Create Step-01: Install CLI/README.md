@@ -3,3 +3,6 @@
 Install AWS CLI
 Install kubectl CLI
 Install eksctl CLI
+...bash
+npm run deploy
+...
