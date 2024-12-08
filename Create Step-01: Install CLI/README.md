@@ -33,8 +33,6 @@ which aws
 aws --version
 aws-cli/2.0.8 Python/3.7.5 Windows/10 botocore/2.0.0dev12
 ```
-
-```
 - Test if AWS CLI is working after configuring the above
 ```
 aws ec2 describe-vpcs
