@@ -83,4 +83,47 @@ mkdir kubectlinstallbinary
 cd kubectlinstallbinary
 curl.exe -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.31.2/2024-11-15/bin/windows/amd64/kubectl.exe
 ```
-![alt text](image.png)
+- Update the system Path environment variable
+C:\Users\haris\kubectlinstallbinary
+- Verify the kubectl client version
+```
+kubectl version --client
+```
+## Step-03: Install eksctl CLI
+### Step-01: eksctl on Mac
+```
+# Install Homebrew on MacOs
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+# Install the Weaveworks Homebrew tap.
+brew tap weaveworks/tap
+
+# Install the Weaveworks Homebrew tap.
+brew install weaveworks/tap/eksctl
+
+# Verify eksctl version
+eksctl version
+```
+## Step-02: eksctl on windows or linux
+### Step-01 Open CMD as administrator
+- Run the below command to install Chocolatey
+```
+# Install Chocolatey by executing this command
+
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+
+```
+- verify by running below command
+```
+choco
+```
+Chocolatey v2.4.1
+### Step-02 Install eksctl
+```
+choco install eksctl
+```
+- Check the version
+```
+eksctl version
+```
+0.197.0
