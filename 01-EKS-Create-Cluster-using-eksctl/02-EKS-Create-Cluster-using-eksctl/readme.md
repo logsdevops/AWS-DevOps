@@ -6,13 +6,15 @@ Before you create your first cluster, make sure that you have installed all the 
 # Create EKS Cluster & Node Groups
 ## Step-01: Create EKS Cluster using eksctl
 - It will take approximately 15 to 20 minutes to set up the Cluster Control Plane. This will create only master node. We will create worker nodes seperately. 
+### Create Cluster
 ```
-# Create Cluster
 eksctl create cluster --name=eksdemo1 \
                       --region=ap-south-1a \
                       --zones=ap-south-1b \
                       --without-nodegroup 
-# Get List of clusters
+```
+### Get List of clusters
+```
 eksctl get cluster
 ```
 ## Step-02: Create & Associate IAM OIDC Provider for our EKS Cluster
